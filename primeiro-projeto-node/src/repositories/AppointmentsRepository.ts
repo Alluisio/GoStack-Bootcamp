@@ -4,12 +4,9 @@ import { EntityRepository, Repository } from 'typeorm';
 @EntityRepository(Appointment)
 class AppointmentsRepository extends Repository<Appointment> {
   public async findByDate(date: Date): Promise<Appointment | null> {
-    // const findAppoitment = this.appointments.find(appointment =>
-    //   isEqual(date, appointment.date),
-    // );
 
     const findAppoitment = await this.findOne({
-      where: { date },
+      where: { date: date },
     });
     return findAppoitment || null;
   }

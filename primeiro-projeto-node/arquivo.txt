@@ -1,1 +1,0 @@
-toda função assíncrona retorna uma Promise<>
