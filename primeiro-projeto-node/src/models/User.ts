@@ -5,6 +5,7 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
 
 //KISS - Keep It Simple & Stupid
 
@@ -21,6 +22,9 @@ class User {
 
   @Column()
   password: string;
+
+  @Column()
+  avatar: string;
 
   @CreateDateColumn()
   created_at: Date;

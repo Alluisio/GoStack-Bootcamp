@@ -1,5 +1,4 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
-
 export default class CreateAppointments1600788002507
   implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
@@ -12,7 +11,7 @@ export default class CreateAppointments1600788002507
             type: 'uuid',
             isPrimary: true,
             generationStrategy: 'uuid',
-            default: 'uuid_generate_v4()'
+            default: 'uuid_generate_v4()',
           },
           {
             name: 'provider',
@@ -29,7 +28,7 @@ export default class CreateAppointments1600788002507
             default: 'now()',
           },
           {
-            name: 'update_at',
+            name: 'updated_at',
             type: 'timestamp',
             default: 'now()',
           },
