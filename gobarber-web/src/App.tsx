@@ -4,9 +4,14 @@ import SingIn from './pages/SignIn';
 // import SingUp from './pages/SingUp';
 import GlobalStyle from './styles/global';
 
+import { AuthProvider } from './hooks/AuthContext';
+
 const App: React.FC = () => (
   <>
-    <SingIn />
+    <AuthProvider>
+      <SingIn />
+    </AuthProvider>
+
     <GlobalStyle />
   </>
 );
