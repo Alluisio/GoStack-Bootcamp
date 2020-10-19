@@ -1,0 +1,10 @@
+## OBRIGATÓRIO TER INSTALADO
+  NODE
+  NPM
+  YARN
+
+## INSTALAR DEPENDÊNCIAS VIA YARN
+  yarn install
+
+## INICIALIZAR APLICAÇÃO
+  yarn start
