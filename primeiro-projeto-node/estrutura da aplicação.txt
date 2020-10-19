@@ -10,6 +10,5 @@ src
 
 Domínio: Qual a área de conhecimento daquele módulo/arquivo
 
-DDD: Domain Driven Desing (metodologia)  // boas praticas para projetos back-end
-
+DDD: Domain Driven Desing (metodologia) // conceitos importantes // boas praticas para projetos back-end
 TDD: Test Driven Development (metodologia)
