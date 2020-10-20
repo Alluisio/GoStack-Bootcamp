@@ -1,0 +1,30 @@
+# TESTES AUTOMATIZADOS
+
+Que a aplicação continue funcionando independe do número de novas funcionalidades e do número de devs no time.
+
+## Testes unitários ( TDD )
+
+Testam funcionalidades específicas da nossa aplicação (precimas ser funções puras).
+
+JAMAIS: Chamada à uma API (EXTERNA) e efeito colateral.
+
+## Testes de integração
+
+Testam uma funcionalidade completa, passando por várias camadas da aplicação.
+
+Route -> Controller -> Serviço -> Repositório -> ...
+
+## Testes E2E
+
+Testes que simulam a ação do usuário dentro da aplicação
+
+### Clique no input email
+### Preencha alluisio.silva@ipdec.org
+### Clique no input senha
+### Preencha 123456
+### Clique no botão "Logar"
+### Espero que a página tenha enviado o usuário para o dashboard
+
+# TDD (Test Driven Development)
+
+- Quando o usuario se cadastrar na aplicação, ele deve receber um email de boas-viandas;
