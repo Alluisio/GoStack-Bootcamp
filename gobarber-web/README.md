@@ -1,10 +1,11 @@
-## OBRIGATÓRIO TER INSTALADO
-  NODE
-  NPM
-  YARN
+## OBRIGATÓRIO ESTAR INSTALADO NA MÁQUINA
+
+YARN
 
 ## INSTALAR DEPENDÊNCIAS VIA YARN
-  yarn install
+
+yarn install
 
 ## INICIALIZAR APLICAÇÃO
-  yarn start
+
+yarn start
