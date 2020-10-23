@@ -1,4 +1,4 @@
-# Recuperação de senha
+<!-- Recuperação de senha
 
 **RF(Requisitos Funcionais)**
 
@@ -15,9 +15,9 @@
 **RN (Regras de Negócio)**
 
 - O link enviado por e-mail para resetar senha, deve expirar em 2h;
-- O usuário precisa confirmar a nova senha ao resetar sua senha;
+- O usuário precisa confirmar a nova senha ao resetar sua senha; -->
 
-# Atualização do perfil
+<!-- # Atualização do perfil
 
 **RF**
 
@@ -29,7 +29,7 @@
 
 - O usuário não pode alterar seu e-mail para um -email já utilizado;
 - Para atualizar sua senha, o usuário deve informar a senha antiga;
-- Para atualizar sua senha, o usuário precisa confirmar a nova senha;
+- Para atualizar sua senha, o usuário precisa confirmar a nova senha; -->
 
 # Painel do prestador
 
@@ -49,7 +49,7 @@
 
 - A notificação deve ter um status de lida ou não-lida para que o prestador possa controlar;
 
-# Agendamento de serviços
+<!-- # Agendamento de serviços
 
 **RF**
 
@@ -68,4 +68,4 @@
 - Os agendamentos devem estar fispovídel entre 8h às 18h (Primeiro às 8h, último às 17h);
 - O usuário não pode agendar em um horário já ocupado;
 - O usuário não pode agendar em um horário que já passou;
-- O usuário não pode agendar serviços consigo mesmo;
+- O usuário não pode agendar serviços consigo mesmo; -->
