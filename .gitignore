@@ -8,3 +8,6 @@ temp/
 
 tpm/*
 !tpm/.gitkeep
+
+**/.env
+**/ormconfig.json
