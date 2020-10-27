@@ -1,17 +1,6 @@
-import { Secret } from 'jsonwebtoken';
-
-interface ISecret {
+export default {
   jwt: {
-    secret: Secret;
-    expiresIn: string;
-  };
-}
-
-const secret = process.env.APP_SECRET;
-
-export default <ISecret>{
-  jwt: {
-    secret,
+    secret: String(process.env.APP_SECRET),
     expiresIn: '1d',
   },
 };

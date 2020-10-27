@@ -7,6 +7,7 @@ import IHashProvider from '../providers/HashProvider/models/IHashProvider';
 import AppError from '@shared/errors/AppError';
 
 import User from '../infra/typeorm/entities/User';
+import { string } from '@hapi/joi';
 
 interface IRequest {
   email: string;
