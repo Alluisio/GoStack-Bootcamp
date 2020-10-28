@@ -11,3 +11,4 @@ tpm/*
 
 **/.env
 **/ormconfig.json
+**/uploads/

@@ -1,9 +1,15 @@
 import React, { createContext, useCallback, useContext, useState } from 'react';
 import api from '../services/api';
 
+interface User {
+  id: string;
+  name: string;
+  avatar_url: string;
+}
+
 interface AuthState {
   token: string;
-  user: object;
+  user: User;
 }
 
 interface SingInCredentials {
@@ -12,9 +18,9 @@ interface SingInCredentials {
 }
 
 interface AuthContextDate {
-  user: object;
+  user: User;
   signIn(credentials: SingInCredentials): Promise<void>;
-  singOut(): void;
+  signOut(): void;
 }
 
 const AuthContext = createContext<AuthContextDate>({} as AuthContextDate);
@@ -25,6 +31,8 @@ export const AuthProvider: React.FC = ({ children }) => {
     const user = localStorage.getItem('@GoBarber: user');
 
     if (token && user) {
+      api.defaults.headers.authorization = `Bearer ${token}`;
+
       return { token, user: JSON.parse(user) };
     }
 
@@ -42,10 +50,12 @@ export const AuthProvider: React.FC = ({ children }) => {
     localStorage.setItem('@GoBarber: token', token);
     localStorage.setItem('@GoBarber: user', JSON.stringify(user));
 
+    api.defaults.headers.authorization = `Bearer ${token}`;
+
     setData({ token, user });
   }, []);
 
-  const singOut = useCallback(() => {
+  const signOut = useCallback(() => {
     localStorage.removeItem('@GoBarber: token');
     localStorage.removeItem('@GoBarber: user');
 
@@ -53,7 +63,7 @@ export const AuthProvider: React.FC = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user: data.user, signIn, singOut }}>
+    <AuthContext.Provider value={{ user: data.user, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );
