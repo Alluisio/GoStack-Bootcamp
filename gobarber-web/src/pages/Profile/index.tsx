@@ -16,7 +16,6 @@ import Button from '../../components/Button';
 
 import { Container, Content, AvatarInput } from './styles';
 import { useAuth } from '../../hooks/auth';
-import { isEmptyBindingElement } from 'typescript';
 
 interface ProfileFromData {
   name: string;
