@@ -27,6 +27,7 @@ interface SingInCredentials {
 
 interface AuthContextDate {
   user: User;
+  loading: boolean;
   signIn(credentials: SingInCredentials): Promise<void>;
   signOut(): void;
   updateUser(user: User): void;
@@ -36,6 +37,7 @@ const AuthContext = createContext<AuthContextDate>({} as AuthContextDate);
 
 export const AuthProvider: React.FC = ({ children }) => {
   const [data, setData] = useState<AuthState>({} as AuthState);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadStorageData(): Promise<void> {
@@ -47,6 +49,8 @@ export const AuthProvider: React.FC = ({ children }) => {
       if (token[1] && user[1]) {
         setData({ token: token[1], user: JSON.parse(user[1]) });
       }
+
+      setLoading(false);
     }
 
     loadStorageData();
@@ -89,7 +93,7 @@ export const AuthProvider: React.FC = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ user: data.user, signIn, signOut, updateUser }}
+      value={{ user: data.user, loading, signIn, signOut, updateUser }}
     >
       {children}
     </AuthContext.Provider>
