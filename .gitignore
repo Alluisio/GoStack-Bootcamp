@@ -9,4 +9,4 @@ temp/
 tpm/*
 !tpm/.gitkeep
 
-**/.env
+
